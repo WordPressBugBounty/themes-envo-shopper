@@ -95,11 +95,13 @@ if (!function_exists('envo_shopper_head_compare')) {
     add_action('envo_shopper_header_right', 'envo_shopper_head_compare', 40);
 
     function envo_shopper_head_compare() {
-        if (function_exists('yith_woocompare_constructor')) {
+        if (class_exists( 'YITH_WooCompare_Frontend' )) {
             global $yith_woocompare;
+			wp_enqueue_script( 'yith-woocompare-main' );
+			$url =  method_exists('YITH_WooCompare_Frontend', 'get_table_url') ? YITH_WooCompare_Frontend::instance()->get_table_url() :  $yith_woocompare->obj->view_table_url();
             ?>
             <div class="header-compare product">
-                <a class="compare added" rel="nofollow" href="<?php echo esc_url($yith_woocompare->obj->view_table_url()); ?>" data-tooltip="<?php esc_attr_e('Compare', 'envo-shopper'); ?>" title="<?php esc_attr_e('Compare', 'envo-shopper'); ?>">
+                <a class="compare added" rel="nofollow" href="<?php echo esc_url($url); ?>" data-tooltip="<?php esc_attr_e('Compare', 'envo-shopper'); ?>" title="<?php esc_attr_e('Compare', 'envo-shopper'); ?>">
                     <i class="la la-sync"></i>
                 </a>
             </div>
