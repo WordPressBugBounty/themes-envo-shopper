@@ -2,9 +2,9 @@
 Contributors: EnvoThemes
 Tags: one-column, two-columns, full-width-template, right-sidebar, custom-background, custom-menu, custom-header, editor-style, featured-images, translation-ready, custom-logo, threaded-comments, footer-widgets, rtl-language-support, blog, e-commerce
 Requires at least: 4.4
-Tested up to: 6.8
+Tested up to: 7.1
 Requires PHP: 5.6
-Stable tag: 1.2.4
+Stable tag: 1.2.5
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -94,6 +94,13 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 Envo Shopper is distributed under the terms of the GNU GPL (http://www.gnu.org/licenses/gpl-3.0.txt), version 3 or later.
 
 == Changelog ==
+
+= Version 1.2.5 =
+* Added theme.json for better block editor support (content and wide width, block spacing, shadows)
+* Fixed wide blocks in constrained layouts and wide and full width blocks next to the sidebar
+* Fixed the text size in the Mini-Cart block drawer
+* Fixed the version of the theme files, so browsers load the new files after an update
+* Tested with WordPress 7.1
 
 = Version 1.2.4 =
 * Updated YITH compare fuctions based on new plugin version

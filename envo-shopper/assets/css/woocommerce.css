@@ -421,3 +421,7 @@ ul.tabs.wc-tabs {
 .widget_shopping_cart .cart_list li, .widget_shopping_cart .cart_list li {
     padding-top: 5px !important;
 }
+/* Mini-Cart block: its drawer sets the text size in rem (1rem = 10px in this theme). */
+.wc-block-mini-cart__drawer {
+    font-size: 15px;
+}

@@ -1,9 +1,8 @@
 <?php
 /**
- * The current version of the theme.
+ * The current version of the theme (also when a child theme is active).
  */
-$the_theme = wp_get_theme();
-define('ENVO_SHOPPER_VERSION', $the_theme->get('Version'));
+define('ENVO_SHOPPER_VERSION', wp_get_theme( get_template() )->get( 'Version' ));
 
 add_action('after_setup_theme', 'envo_shopper_setup');
 
